@@ -1,0 +1,44 @@
+﻿{
+  "skills": [
+    {
+      "name": "C#",
+      "level": "Proficient",
+      "months": 252
+    },
+    {
+      "name": ".NET",
+      "level": "Proficient",
+      "months": 252
+    },
+    {
+      "name": ".NET Core",
+      "level": "Proficient",
+      "months": 252
+    },
+    {
+      "name": "ASP.NET",
+      "level": "Proficient",
+      "months": 252
+    },
+    {
+      "name": "Angular",
+      "level": "Intermediate",
+      "months": 24
+    },
+    {
+      "name": "Azure DevOps",
+      "level": "Intermediate",
+      "months": 12
+    },
+    {
+      "name": "Azure",
+      "level": "Novice",
+      "months": 36
+    },
+    {
+      "name": "AWS",
+      "level": "Novice",
+      "months": 24
+    }
+  ]
+}

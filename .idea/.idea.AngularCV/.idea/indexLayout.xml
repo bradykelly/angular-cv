@@ -5,6 +5,8 @@
       <Path>basic-angular</Path>
     </attachedFolders>
     <explicitIncludes />
-    <explicitExcludes />
+    <explicitExcludes>
+      <Path>basic-angular/dist</Path>
+    </explicitExcludes>
   </component>
 </project>
