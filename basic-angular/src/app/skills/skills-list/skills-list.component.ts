@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {plainToClass, plainToInstance} from 'class-transformer';
 import {SkillComponent} from "../skill/skill.component";
 import {DataService} from "../../shared/data.service";
 import {NgForOf} from "@angular/common";
