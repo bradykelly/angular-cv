@@ -3,11 +3,11 @@
   "version": 1,
   "cli": {
     "packageManager": "pnpm",
-    "analytics": "83b62947-7c24-41ad-bf9c-034c326b4273"
+    "analytics": "a9dbdf7c-cb33-4cda-a2b6-0e622ff4f4fb"
   },
   "newProjectRoot": "projects",
   "projects": {
-    "basic-angular": {
+    "prototype": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -16,15 +16,14 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "cv",
       "architect": {
         "build": {
-          "builder": "ngx-build-plus:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "extraWebpackConfig": "webpack.config.js",
-            "outputPath": "dist/basic-angular",
-            "main": "src/main.ts",
+            "outputPath": "dist/prototype",
             "index": "src/index.html",
+            "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -32,8 +31,7 @@
             "inlineStyleLanguage": "less",
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              "src/app/skills/skills.json"
+              "src/assets"
             ],
             "styles": [
               "src/styles.less"
@@ -54,13 +52,7 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all",
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.production.ts"
-                }
-              ]
+              "outputHashing": "all"
             },
             "development": {
               "optimization": false,
@@ -68,31 +60,28 @@
               "sourceMap": true
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "ngx-build-plus:dev-server",
-          "options": {
-            "extraWebpackConfig": "webpack.config.js"
-          }
+          "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "basic-angular:build:production"
+              "buildTarget": "prototype:build:production"
             },
             "development": {
-              "buildTarget": "basic-angular:build:development"
+              "buildTarget": "prototype:build:development"
             }
           },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
-          "builder": "ngx-build-plus:extract-i18n",
+          "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "basic-angular:build"
+            "buildTarget": "prototype:build"
           }
         },
         "test": {
-          "builder": "ngx-build-plus:karma",
+          "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "polyfills": [
               "zone.js",
@@ -102,8 +91,7 @@
             "inlineStyleLanguage": "less",
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              "src/skills/skills.json"
+              "src/assets"
             ],
             "styles": [
               "src/styles.less"

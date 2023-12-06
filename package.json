@@ -1,0 +1,6 @@
+{
+	"dependencies": {
+		"os-browserify": "github:deepin-community/node-os-browserify",
+		"stream-browserify": "^3.0.0"
+	}
+}
